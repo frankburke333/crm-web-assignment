@@ -79,3 +79,7 @@ nav li {
   color: white;
   font-size: 19px;
 }
+
+.form {
+  display: block;
+}
