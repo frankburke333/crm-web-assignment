@@ -2,11 +2,25 @@
 <div class="contact_body">
   <h2 class="contact_count"> There are <span style="text-decoration:underline"><strong><%= @contact_count %></strong></span> contacts</h2>
   <section class="contact_list"
-  <ul>
-  <% Contact.all.each do |contact| %>
+    <ul>
+    <% Contact.all.each do |contact| %>
 
-    <div class="contact"><li class="list_item"><%= contact.first_name %> <%= contact.last_name %> (<%= contact.email %>)  </li><div class="edit_delete"><a href="#">Edit</a>|</a><a href="#">Delete</a></div></div>
-  <% end %>
+      <div class="contact">
+        <li class="list_item">
+          <a href="/contacts/<%= contact.id %>"> <%= contact.first_name %> <%= contact.last_name %> (<%= contact.email %>)</a>
+
+          contact: Frank Burke, ID: 24, email: frank@burke.com
+
+          <a href="/contacts/24"> Frank Burke (frank.burke@gmail.com)
+        </li>
+        <div class="edit_delete">
+          <a href="#">Edit</a>
+          |
+          <a href="#">Delete</a>
+        </div>
+      </div>
+
+    <% end %>
   </ul>
 
 </div>
