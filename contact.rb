@@ -11,7 +11,7 @@ class Contact
 
   @@contacts = []
 
-  @@next_id = 333
+  @@next_id = 1
 
 
   def first_name
