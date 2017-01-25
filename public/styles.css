@@ -1,0 +1,81 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  list-style: none;
+}
+
+contact_count span {
+  text-decoration-color: #00fff3;
+}
+
+body {
+  font-family: arial;
+
+}
+
+.contact_count {
+  background-color: rgb(231, 127, 111);
+  padding: 10px;
+}
+
+
+.contact li {
+  margin-left: 10px;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+
+.contact {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: #00fff3;
+  padding: 10px;
+
+}
+
+.main h1 {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 30px;
+}
+nav ul {
+text-align: center;
+-webkit-padding-start: 0px;
+}
+
+nav li {
+  background-color: grey;
+  color: white;
+  margin-bottom: 2px;
+  font-size: 28px;
+  font-weight: bold;
+}
+ nav a {
+   text-decoration: none;
+   color: white;
+ }
+
+.edit_delete {
+  margin-left: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.contact_body {
+  margin-top: 3%;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+.contact_footer {
+  padding: 20px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-size: 19px;
+}

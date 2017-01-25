@@ -1,7 +1,15 @@
-<h1>All Contacts</h1>
 
-<ul>
-<% Contact.all.each do |contact| %>
-  <li><%= contact.first_name %> <%= contact.last_name %></li>
-<% end %>
-</ul>
+<div class="contact_body">
+  <h2 class="contact_count"> There are <span style="text-decoration:underline"><strong><%= @contact_count %></strong></span> contacts</h2>
+  <section class="contact_list"
+  <ul>
+  <% Contact.all.each do |contact| %>
+
+    <div class="contact"><li class="list_item"><%= contact.first_name %> <%= contact.last_name %> (<%= contact.email %>)  </li><div class="edit_delete"><a href="#">Edit</a>|</a><a href="#">Delete</a></div></div>
+  <% end %>
+  </ul>
+
+</div>
+<footer class="contact_footer">
+  <h5> &copy;Bitmaker 2016</h5>
+</footer>
