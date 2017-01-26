@@ -7,7 +7,7 @@
 
 class Contact
   attr_reader :id
-  attr_accessor :first_name, :last_name, :email, :note
+  attr_accessor :first_name, :last_name, :email, :note, :date
 
   @@contacts = []
 
@@ -24,21 +24,22 @@ class Contact
 
 
   # This method should initialize the contact's attributes
-  def initialize (first_name, last_name, email, note)
+  def initialize (first_name, last_name, email, note, date)
     @id = @@next_id
     @first_name = first_name
     @last_name = last_name
     @email = email
     @note = note
+    @date = date
     @@next_id +=1
   end
 
 
   # This method should call the initializer,
   # store the newly created contact, and then return it
-  def self.create(first_name, last_name, email, note)
+  def self.create(first_name, last_name, email, note, date)
 
-    new_contact = self.new(first_name, last_name, email, note)
+    new_contact = self.new(first_name, last_name, email, note, date)
 
     @@contacts << new_contact
 
@@ -78,6 +79,8 @@ class Contact
       self.email = new_value
     when :note
       self.note = new_value
+    when :date
+      self.date = new_value
 
     end
 
@@ -93,6 +96,7 @@ class Contact
     return contact if attribute.to_sym == :last_name && contact.last_name == value
     return contact if attribute.to_sym == :email && contact.email == value
     return contact if attribute.to_sym == :note && contact.note == value
+    return contact if attribute.to_sym == :date && contact.date == value
 
 
 
@@ -121,11 +125,12 @@ class Contact
   def display_contact
     puts
     puts:"=============================="
-    puts "first name: #{@first_name}"
-    puts "last name: #{@last_name}"
-    puts "email: #{@email}"
-    puts "note: #{@note}"
-    puts "id: #{@id}"
+    puts "First name: #{@first_name}"
+    puts "Last name: #{@last_name}"
+    puts "Email: #{@email}"
+    puts "Note: #{@note}"
+    puts "Id: #{@id}"
+    puts "Date:#{@date}"
     puts "==============================="
   end
 

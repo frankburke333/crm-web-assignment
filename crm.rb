@@ -21,7 +21,7 @@ end
 
 
 post '/contacts' do
-  Contact.create(params[:first_name], params[:last_name], params[:email], params[:note])
+  Contact.create(params[:first_name], params[:last_name], params[:email], params[:note], params[:date])
   redirect to('/contacts')
 
 end
@@ -53,6 +53,8 @@ put '/contacts/:id' do
     @contact.last_name = params[:last_name]
     @contact.email = params[:email]
     @contact.note = params[:note]
+    @contact.date = params[:date]
+
 
     redirect to('/contacts')
   else
