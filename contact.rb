@@ -9,7 +9,7 @@ class Contact < ActiveRecord::Base
   field :last_name,  as: :string
   field :email,      as: :string
   field :note,       as: :text
-
+  field :date,       as: :date
   def full_name
     "#{first_name} #{last_name}"
   end
